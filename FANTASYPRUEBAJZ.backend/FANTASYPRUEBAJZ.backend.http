@@ -1,0 +1,6 @@
+@FANTASYPRUEBAJZ.backend_HostAddress = http://localhost:5083
+
+GET {{FANTASYPRUEBAJZ.backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
