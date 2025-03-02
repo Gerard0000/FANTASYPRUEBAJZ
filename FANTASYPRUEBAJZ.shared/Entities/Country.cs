@@ -9,4 +9,9 @@ public class Country
     [MaxLength(100)]
     [Required]
     public string Name { get; set; } = null!;
+
+    public ICollection<Team>? Teams { get; set; }
+
+    //EN VEZ DE QUE LA BASE DE DATOS ME DEVUELVA NULL ME TIENE QUE DEVOLVER 0
+    public int TeamsCount => Teams == null ? 0 : Teams.Count;
 }
