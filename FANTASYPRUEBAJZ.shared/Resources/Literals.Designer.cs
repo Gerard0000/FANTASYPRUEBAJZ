@@ -70,6 +70,24 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmation.
+        /// </summary>
+        public static string Confirmation {
+            get {
+                return ResourceManager.GetString("Confirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Countries.
         /// </summary>
         public static string Countries {
@@ -88,6 +106,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
@@ -97,11 +124,29 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete the {0}; {1}?.
+        /// </summary>
+        public static string DeleteConfirm {
+            get {
+                return ResourceManager.GetString("DeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
@@ -124,6 +169,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you want to leave the page and lose your changes?.
+        /// </summary>
+        public static string LeaveandLoseChanges {
+            get {
+                return ResourceManager.GetString("LeaveandLoseChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -142,6 +196,51 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Record created OK.
+        /// </summary>
+        public static string RecordCreateOk {
+            get {
+                return ResourceManager.GetString("RecordCreateOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record deleted successfully.
+        /// </summary>
+        public static string RecordDeleteOk {
+            get {
+                return ResourceManager.GetString("RecordDeleteOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record Saved Successfully.
+        /// </summary>
+        public static string RecordSavedOk {
+            get {
+                return ResourceManager.GetString("RecordSavedOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.
+        /// </summary>
+        public static string Return {
+            get {
+                return ResourceManager.GetString("Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Changes.
+        /// </summary>
+        public static string SaveChanges {
+            get {
+                return ResourceManager.GetString("SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soccer Predictions App.
         /// </summary>
         public static string Subtitle {
@@ -156,6 +255,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }
