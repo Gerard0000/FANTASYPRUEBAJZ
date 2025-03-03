@@ -23,7 +23,7 @@ public partial class CountryCreate
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            await SweetAlertService.FireAsync(Localizer["Error"], message);
+            await SweetAlertService.FireAsync(Localizer["Error"], Localizer[message!]);
             return;
         }
 
@@ -35,7 +35,7 @@ public partial class CountryCreate
             ShowConfirmButton = true,
             Timer = 3000
         });
-        await toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordCreatedOk"]);
+        await toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordCreateOk"]);
     }
 
     private void Return()

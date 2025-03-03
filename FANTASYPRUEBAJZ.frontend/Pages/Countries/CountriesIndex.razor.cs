@@ -60,8 +60,8 @@ public partial class CountriesIndex
             }
             else
             {
-                var mensajeError = await responseHttp.GetErrorMessageAsync();
-                await SweetAlertService.FireAsync(Localizer["Error"], mensajeError, SweetAlertIcon.Error);
+                var messageError = await responseHttp.GetErrorMessageAsync();
+                await SweetAlertService.FireAsync(Localizer["Error"], Localizer[messageError!]);
             }
             return;
         }
@@ -76,6 +76,6 @@ public partial class CountriesIndex
             ConfirmButtonText = Localizer["Yes"]
         });
         //NO SE LE PONE AWAIT PORQUE NO SE TIENE QUE ESPERAR
-        toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordDeletedOk"]);
+        toast.FireAsync(icon: SweetAlertIcon.Success, message: Localizer["RecordDeleteOk"]);
     }
 }

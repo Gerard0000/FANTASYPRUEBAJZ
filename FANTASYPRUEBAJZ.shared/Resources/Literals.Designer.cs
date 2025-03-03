@@ -151,6 +151,33 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Record not found.
+        /// </summary>
+        public static string ERROR01 {
+            get {
+                return ResourceManager.GetString("ERROR01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot of deleted because it has related records.
+        /// </summary>
+        public static string ERROR02 {
+            get {
+                return ResourceManager.GetString("ERROR02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The record you are trying to create already exists.
+        /// </summary>
+        public static string ERROR03 {
+            get {
+                return ResourceManager.GetString("ERROR03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inicio.
         /// </summary>
         public static string Home {
@@ -174,6 +201,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         public static string LeaveandLoseChanges {
             get {
                 return ResourceManager.GetString("LeaveandLoseChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File {0} cannot be longer than {1} characters.
+        /// </summary>
+        public static string MaxLength {
+            get {
+                return ResourceManager.GetString("MaxLength", resourceCulture);
             }
         }
         
@@ -223,6 +259,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field {0} is required.
+        /// </summary>
+        public static string RequiredField {
+            get {
+                return ResourceManager.GetString("RequiredField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Return.
         /// </summary>
         public static string Return {
@@ -246,6 +291,15 @@ namespace FANTASYPRUEBAJZ.shared.Resources {
         public static string Subtitle {
             get {
                 return ResourceManager.GetString("Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team.
+        /// </summary>
+        public static string Team {
+            get {
+                return ResourceManager.GetString("Team", resourceCulture);
             }
         }
         
