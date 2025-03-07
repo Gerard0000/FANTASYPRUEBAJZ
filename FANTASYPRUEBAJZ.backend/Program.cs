@@ -4,12 +4,14 @@ using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
 using FANTASYPRUEBAJZ.backend.UnitofWork.Implementations;
 using FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+//PARA EVITAR REDUNDANCIA CICLICA
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,6 +20,9 @@ builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=LocalConnec
 
 //INYECTAMOS EL SEEDDB
 builder.Services.AddTransient<SeedDb>();
+
+builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
+builder.Services.AddScoped<ICountriesUnitOfWork, CountriesUnitOfWork>();
 
 //Inyectamos para los controladores genericos y funcione por repository y genericunitofwork
 builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitofWork<>));
