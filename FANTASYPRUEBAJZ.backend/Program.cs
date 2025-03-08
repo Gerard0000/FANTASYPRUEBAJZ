@@ -1,4 +1,5 @@
 using FANTASYPRUEBAJZ.backend.Data;
+using FANTASYPRUEBAJZ.backend.Helpers;
 using FANTASYPRUEBAJZ.backend.Repositories.Implementations;
 using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
 using FANTASYPRUEBAJZ.backend.UnitofWork.Implementations;
@@ -20,6 +21,9 @@ builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=LocalConnec
 
 //INYECTAMOS EL SEEDDB
 builder.Services.AddTransient<SeedDb>();
+
+//INYECTAMOS EL FILESTORAGE
+builder.Services.AddScoped<IFileStorage, FileStorage>();
 
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<ICountriesUnitOfWork, CountriesUnitOfWork>();
