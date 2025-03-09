@@ -2,8 +2,9 @@ using FANTASYPRUEBAJZ.backend.Data;
 using FANTASYPRUEBAJZ.backend.Helpers;
 using FANTASYPRUEBAJZ.backend.Repositories.Implementations;
 using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
-using FANTASYPRUEBAJZ.backend.UnitofWork.Implementations;
-using FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
+using FANTASYPRUEBAJZ.backend.UnitOfWork.Implementations;
+using FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -25,12 +26,15 @@ builder.Services.AddTransient<SeedDb>();
 //INYECTAMOS EL FILESTORAGE
 builder.Services.AddScoped<IFileStorage, FileStorage>();
 
+//Inyectamos para los controladores genericos y funcione por repository y genericunitofwork
+builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitOfWork<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<ICountriesUnitOfWork, CountriesUnitOfWork>();
 
-//Inyectamos para los controladores genericos y funcione por repository y genericunitofwork
-builder.Services.AddScoped(typeof(IGenericUnitOfWork<>), typeof(GenericUnitofWork<>));
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<ITeamsRepository, TeamsRepository>();
+builder.Services.AddScoped<ITeamsUnitOfWork, TeamsUnitOfWork>();
 
 var app = builder.Build();
 

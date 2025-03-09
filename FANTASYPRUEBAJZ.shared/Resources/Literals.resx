@@ -186,13 +186,13 @@
   <data name="RecordCreateOk" xml:space="preserve">
     <value>Record created OK</value>
   </data>
-  <data name="ERROR01" xml:space="preserve">
+  <data name="ERR001" xml:space="preserve">
     <value>Record not found</value>
   </data>
-  <data name="ERROR02" xml:space="preserve">
+  <data name="ERR002" xml:space="preserve">
     <value>Cannot of deleted because it has related records</value>
   </data>
-  <data name="ERROR03" xml:space="preserve">
+  <data name="ERR003" xml:space="preserve">
     <value>The record you are trying to create already exists</value>
   </data>
   <data name="Team" xml:space="preserve">
@@ -203,5 +203,11 @@
   </data>
   <data name="RequiredField" xml:space="preserve">
     <value>Field {0} is required</value>
+  </data>
+  <data name="ERR004" xml:space="preserve">
+    <value>The Country Id is not valid</value>
+  </data>
+  <data name="ERR005" xml:space="preserve">
+    <value>The team Id is not valid</value>
   </data>
 </root>

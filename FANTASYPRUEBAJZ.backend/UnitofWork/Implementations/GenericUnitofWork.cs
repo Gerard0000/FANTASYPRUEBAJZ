@@ -1,14 +1,14 @@
 ﻿using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
-using FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
+using FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
 using FANTASYPRUEBAJZ.shared.Responses;
 
-namespace FANTASYPRUEBAJZ.backend.UnitofWork.Implementations;
+namespace FANTASYPRUEBAJZ.backend.UnitOfWork.Implementations;
 
-public class GenericUnitofWork<T> : IGenericUnitOfWork<T> where T : class
+public class GenericUnitOfWork<T> : IGenericUnitOfWork<T> where T : class
 {
     private readonly IGenericRepository<T> _repository;
 
-    public GenericUnitofWork(IGenericRepository<T> repository)
+    public GenericUnitOfWork(IGenericRepository<T> repository)
     {
         _repository = repository;
     }

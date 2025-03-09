@@ -1,7 +1,7 @@
 ﻿using FANTASYPRUEBAJZ.shared.Entities;
 using FANTASYPRUEBAJZ.shared.Responses;
 
-namespace FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
+namespace FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
 
 public interface ICountriesUnitOfWork
 {

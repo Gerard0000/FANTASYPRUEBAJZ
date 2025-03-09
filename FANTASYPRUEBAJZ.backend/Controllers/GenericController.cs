@@ -1,4 +1,4 @@
-﻿using FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
+﻿using FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FANTASYPRUEBAJZ.backend.Controllers;

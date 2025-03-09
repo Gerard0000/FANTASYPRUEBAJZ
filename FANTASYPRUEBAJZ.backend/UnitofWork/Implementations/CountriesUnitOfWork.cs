@@ -1,11 +1,11 @@
 ﻿using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
-using FANTASYPRUEBAJZ.backend.UnitofWork.Interfaces;
+using FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
 using FANTASYPRUEBAJZ.shared.Entities;
 using FANTASYPRUEBAJZ.shared.Responses;
 
-namespace FANTASYPRUEBAJZ.backend.UnitofWork.Implementations;
+namespace FANTASYPRUEBAJZ.backend.UnitOfWork.Implementations;
 
-public class CountriesUnitOfWork : GenericUnitofWork<Country>, ICountriesUnitOfWork
+public class CountriesUnitOfWork : GenericUnitOfWork<Country>, ICountriesUnitOfWork
 {
     private readonly ICountriesRepository _countriesRepository;
 
