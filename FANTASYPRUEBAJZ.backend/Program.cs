@@ -4,20 +4,21 @@ using FANTASYPRUEBAJZ.backend.Repositories.Implementations;
 using FANTASYPRUEBAJZ.backend.Repositories.Interfaces;
 using FANTASYPRUEBAJZ.backend.UnitOfWork.Implementations;
 using FANTASYPRUEBAJZ.backend.UnitOfWork.Interfaces;
-
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//
+
 //PARA EVITAR REDUNDANCIA CICLICA
-builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Services.AddControllers()
+    .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//INYECTAMOS EL STRING DE CONECCIÓN
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=LocalConnection"));
 
 //INYECTAMOS EL SEEDDB
@@ -38,7 +39,7 @@ builder.Services.AddScoped<ITeamsUnitOfWork, TeamsUnitOfWork>();
 
 var app = builder.Build();
 
-//VA CON LAS MIGRACIONES
+//VA CON LOS SEEDERS
 SeedData(app);
 void SeedData(WebApplication app)
 {

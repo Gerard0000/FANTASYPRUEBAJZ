@@ -22,5 +22,7 @@ namespace FANTASYPRUEBAJZ.shared.Entities
         public Country? Country { get; set; }
 
         public int CountryId { get; set; }
+
+        public string ImageFull => string.IsNullOrEmpty(Image) ? "/images/NoImage.png" : Image;
     }
 }
